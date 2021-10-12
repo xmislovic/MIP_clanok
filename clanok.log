@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.4)  11 OCT 2021 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.4)  12 OCT 2021 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,20 +336,6 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 67.
-
-LaTeX Warning: Citation `Coplien:MPD' on page 1 undefined on input line 69.
-
-
-LaTeX Warning: Citation `Czarnecki:Staged' on page 1 undefined on input line 69
-.
-
-
-LaTeX Warning: Citation `Czarnecki:Progress' on page 1 undefined on input line 
-69.
-
-
-LaTeX Warning: Citation `PLP-Framework' on page 1 undefined on input line 69.
-
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
@@ -373,24 +359,18 @@ Package hyperref Warning: Composite letter `\textasciicaron+t'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 109.
 
-(./clanok.bbl) [2] (./clanok.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(./clanok.bbl [2]) [3] (./clanok.aux)
 Package rerunfilecheck Info: File `clanok.out' has not changed.
 (rerunfilecheck)             Checksum: 532BD423342EB90A23F7544BD65B5428;454.
  ) 
 Here is how much of TeX's memory you used:
- 6605 strings out of 481252
- 99465 string characters out of 5915888
- 417898 words of memory out of 5000000
+ 6606 strings out of 481252
+ 99471 string characters out of 5915888
+ 419044 words of memory out of 5000000
  23399 multiletter control sequences out of 15000+600000
  416768 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,8n,74p,340b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,8n,74p,841b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/martinmis/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000
 .600pk> </home/martinmis/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcr
 m0600.600pk> </home/martinmis/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/e
@@ -406,10 +386,10 @@ onts/type1/public/cs/csr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 usr/share/texlive/texmf-dist/fonts/type1/public/cs/csti10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/cs/cstt10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/cs/cstt9.pfb>
-Output written on clanok.pdf (2 pages, 94843 bytes).
+Output written on clanok.pdf (3 pages, 98714 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
