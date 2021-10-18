@@ -498,6 +498,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cs/csr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cs/csr6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cs/csbx9.tfm
+INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/diagram-crop.pdf
+INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/diagram-crop.pdf
+INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/diagram-crop.pdf
+INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/diagram-crop.pdf
+INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/diagram-crop.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/clanok.aux
 INPUT /home/martinmis/Dokumenty/Škola/MIP/Článok/clanok.out
