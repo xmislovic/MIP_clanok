@@ -1,5 +1,3 @@
-% Metódy inžinierskej práce
-
 \documentclass[10pt,twoside,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
@@ -32,6 +30,7 @@
 \maketitle
 
 \begin{abstract}
+% Definitívne treba prerobiť
 V dnešnej dobe existuje veľa metód a techník ako správne postupovať pri dizajne a modelovaní užívateľských rozhraní.
 Mnoho z nich však zabúda na to, že dané užívateľské rozhrania budú používať aj užívatelia s rôznymi zdravotnými postihnutiami, 
 pre ktorých môže byť používanie klasických užívateľských rozhraní komplikované, až nemožné. Tento článok chce priblížiť v 
@@ -43,11 +42,27 @@ a aké techniky a pravidlá sa pri tvorbe, dizajne a modelovaní takýchto uží
 \section{Modelovanie užívatelských rozhraní}
 
 \section{Nároky zdravotne postihnutých užívateľov}
+Uživatelia so zdravotnými postihnutiami majú odlišné nároky ako bežný uživatelia.
+Rozdielnosť týchto nárokov sa odráža v tom ako treba pristupovať k modelovaniu
+uživatelských rozhraní pre týchto ľudí. Nároky sa rôzňa podla druhu zdravotného
+postihnutia no základná myšlienka zostáva rovnaká. Ako príklad uvediem nároky
+slepých ľudí. Nároky slepých sa dajú rozdeliť do piatich kategórií:
 
-\begin{figure}[h]
+\begin{enumerate}
+	\item \textbf{Adekvátnosť} - Úloha musí byť adekvátna schopnostiam slepých uživateľov
+	\item \textbf{Dimenzionálny kompromis} - Užívateľské rozhranie musí zachovať balanc
+	medzi 2D prístupom vidiacih a 1D prístupom slepých
+	\item \textbf{Rovnosť správania} - Slepý užívatelia by mali mať prístup ku všetkým relevantným
+	častiam uživateľského rozhrania
+	\item \textbf{Prevensia semantickej straty} - Užívatelské rozhranie musí predísť strate
+	semantických informácií
+	\item \textbf{Nezávislosť na zariadení} - Uživatelské rozhranie by malo fungovať na rôznych
+	asistenčných technológiach
+\end{enumerate} 
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{diagram-crop.pdf}
-	\caption{Vpliv rozhraní nevidomých na HCI modely}
+	\caption{Vpliv nárokov nevidomých na HCI modely}
 \end{figure}
 
 \section{Nástroje pre tvorbu užívalských rozhraní pre zdravotne postihnutých}
