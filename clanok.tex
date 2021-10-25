@@ -7,7 +7,7 @@
 \usepackage{url} 
 \usepackage{hyperref} 
 
-%\usepackage{cite}
+\usepackage{cite}
 
 \graphicspath{{./}}
 
@@ -42,12 +42,20 @@ a aké techniky a pravidlá sa pri tvorbe, dizajne a modelovaní takýchto uží
 \section{Modelovanie užívatelských rozhraní}
 
 \section{Nároky zdravotne postihnutých užívateľov}
-Uživatelia so zdravotnými postihnutiami majú odlišné nároky ako bežný uživatelia.
-Rozdielnosť týchto nárokov sa odráža v tom ako treba pristupovať k modelovaniu
-uživatelských rozhraní pre týchto ľudí. Nároky sa rôzňa podla druhu zdravotného
-postihnutia no základná myšlienka zostáva rovnaká. Ako príklad uvediem nároky
-slepých ľudí. Nároky slepých sa dajú rozdeliť do piatich kategórií:
 
+\subsection{Ako s počítačmi interagujú zdravotne postihnutý}
+V dnešnej dobe takmer každý interaguje v nejakej forme s počítačom pomocou užívalských rozhraní.
+To platí aj pre ľudí s rôznymimi zdravotnými postihnutiamy. Boli vyvinuté rôzne asistenčné
+technológie, ktoré umožňujú nevidiacim, zle vidiacim, ľudom s dyslexiou či inými poruchami
+spracovávania, hluchým, zle počujúcim či ľudom bez rúk interagovať s počítačom. 
+Na to aby takéto asistenčné technológie fungovali je však potrebné aby tieto Uživatelské
+spĺňali určité podmienky\cite{10.1145/2559206.2567823}.
+
+\subsection{Príklad nárokov zdravotne postihnutých užívateľov}
+Nároky na užívatelské rozhrania sa menia podľa zdravotného postihnutia a teda druhu asistenčnej
+technológie. Hlavné myšlienky a základné princípy s, ktorými treba pristupovať ku tvorbe takýchto
+rozhraní sú však podobné. Ako príklad nárokov zdravotne postihnutých uvediem nároky slepých ľudí.
+Tie sa dajú rozdeliť do piatich kategórií:
 \begin{enumerate}
 	\item \textbf{Adekvátnosť} - Úloha musí byť adekvátna schopnostiam slepých uživateľov
 	\item \textbf{Dimenzionálny kompromis} - Užívateľské rozhranie musí zachovať balanc
@@ -58,17 +66,21 @@ slepých ľudí. Nároky slepých sa dajú rozdeliť do piatich kategórií:
 	semantických informácií
 	\item \textbf{Nezávislosť na zariadení} - Uživatelské rozhranie by malo fungovať na rôznych
 	asistenčných technológiach
-\end{enumerate} 
+\end{enumerate}
+Tieto nároky majú dopad na všetky modely použité vo vývoji
+"human-computer" rozhraní.\cite{10.1007/978-3-540-70540-6_117}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{diagram-crop.pdf}
-	\caption{Vpliv nárokov nevidomých na HCI modely}
+	\caption{Vpliv nárokov nevidomých na HCI modely\cite{10.1007/978-3-540-70540-6_117}}
 \end{figure}
+
+\section{Vplyv nárokov zdravotne postihnutých na jednotlivé modely}
 
 \section{Nástroje pre tvorbu užívalských rozhraní pre zdravotne postihnutých}
 
 \section{Zásady prístupného dizajnu}
 
-%\bibliography{literatura}
-%\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\bibliography{literatura}
+\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}

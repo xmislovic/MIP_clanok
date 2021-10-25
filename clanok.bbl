@@ -1,3 +1,18 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{10.1007/978-3-540-70540-6_117}
+Fernando Alonso, Jos{\'e}~L. Fuertes, {\'A}ngel~L. Gonz{\'a}lez, and Lo{\"i}c
+  Mart{\'i}nez.
+\newblock User-interface modelling for blind users.
+\newblock In Klaus Miesenberger, Joachim Klaus, Wolfgang Zagler, and Arthur
+  Karshmer, editors, {\em Computers Helping People with Special Needs}, pages
+  789--796, Berlin, Heidelberg, 2008. Springer Berlin Heidelberg.
+
+\bibitem{10.1145/2559206.2567823}
+Terrill Thompson.
+\newblock Improving the user interface for people with disabilities.
+\newblock In {\em CHI '14 Extended Abstracts on Human Factors in Computing
+  Systems}, CHI EA '14, page 1029–1030, New York, NY, USA, 2014. Association
+  for Computing Machinery.
 
 \end{thebibliography}
