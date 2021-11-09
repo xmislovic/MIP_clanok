@@ -1,3 +1,5 @@
+% Bada Bib! Backup File
+
 @inproceedings{10.1007/978-3-540-70540-6_117,
     abstract  = {The design of a user interface usable by blind people sets specific usability requirements that are unnecessary for sighted users. These requirements focus on task adequacy, dimensional trade-off, behaviour equivalence, semantic loss avoidance and device-independency. Consequently, the development of human-computer interfaces (HCI) that are based on task, domain, dialog, presentation, platform and user models has to be modified to take into account these requirements. This paper presents a user interface model for blind people, which incorporates these usability requirements into the above HCI models. A framework implementing the model has been developed and implemented in an electronic speaking bilingual software environment for blind or visually impaired people and in an educational system for children with special educational needs.},
     address   = {Berlin, Heidelberg},
@@ -84,8 +86,9 @@ Easier system's interface.},
 @misc{kirkpatrick_connor_campbell_cooper_2018,
     author       = {W3C},
     edition      = {2.1},
-    howpublished = {\url{https://www.w3.org/TR/WCAG21/}},
+    howpublished = {https://www.w3.org/TR/WCAG21/},
     institution  = {W3C World Wide Web Consortium},
+    journal      = {W3C},
     month        = {Jun},
     title        = {Web Content Accessibility Guidelines (WCAG) 2.1},
     year         = {2018}

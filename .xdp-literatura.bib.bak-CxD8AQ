@@ -1,0 +1,89 @@
+% Bada Bib! Backup File
+
+@InProceedings{10.1007/978-3-540-70540-6_117,
+author="Alonso, Fernando
+and Fuertes, Jos{\'e} L.
+and Gonz{\'a}lez, {\'A}ngel L.
+and Mart{\'i}nez, Lo{\"i}c",
+editor="Miesenberger, Klaus
+and Klaus, Joachim
+and Zagler, Wolfgang
+and Karshmer, Arthur",
+title="User-Interface Modelling for Blind Users",
+booktitle="Computers Helping People with Special Needs",
+year="2008",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="789--796",
+abstract="The design of a user interface usable by blind people sets specific usability requirements that are unnecessary for sighted users. These requirements focus on task adequacy, dimensional trade-off, behaviour equivalence, semantic loss avoidance and device-independency. Consequently, the development of human-computer interfaces (HCI) that are based on task, domain, dialog, presentation, platform and user models has to be modified to take into account these requirements. This paper presents a user interface model for blind people, which incorporates these usability requirements into the above HCI models. A framework implementing the model has been developed and implemented in an electronic speaking bilingual software environment for blind or visually impaired people and in an educational system for children with special educational needs.",
+isbn="978-3-540-70540-6"
+}
+
+@inproceedings{10.1145/2559206.2567823,
+author = {Thompson, Terrill},
+title = {Improving the User Interface for People with Disabilities},
+year = {2014},
+isbn = {9781450324748},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2559206.2567823},
+doi = {10.1145/2559206.2567823},
+abstract = {This course will explore the current state of the art in computer user interfaces
+(UIs) designed for people with disabilities, and will identify problems in the current
+models that may warrant alternative strategies. The course will begin by exploring
+a variety of UIs designed for people who are unable to see, hear, or use their hands,
+as well as those designed for people with dyslexia and other processing disabilities.
+Attendees will discover that the wide spectrum of available UIs makes it possible
+for almost anyone to use information technology. However, they will also experience
+examples of how this UI model breaks down when the software, document, form or website
+users are trying to access is designed in a way that fails to support user diversity.
+Current models are dependent on designers, developers, and authors to create products
+that are accessible, and these models are largely failing. Despite laws that require
+accessible design, and standards and guidelines that define it, people with disabilities
+still face daunting barriers that prevent them from accessing technology. This course
+will explore this problem in some depth, and participants will brainstorm possible
+solutions. This course is intended for all audiences. Everyone who designs or develops
+interfaces, and everyone who authors content, should be aware of how the interface
+or content they create affects individuals with disabilities. Attendees will learn
+current techniques and best practices for minimizing accessibility barriers, and will
+have an opportunity to contribute to the discussion regarding possible alternative
+solutions.},
+booktitle = {CHI '14 Extended Abstracts on Human Factors in Computing Systems},
+pages = {1029–1030},
+numpages = {2},
+keywords = {design, human factors, standardization},
+location = {Toronto, Ontario, Canada},
+series = {CHI EA '14}
+}
+
+@inproceedings{10.1145/3471391.3471400,
+author = {Moreno, Lourdes and Alarcon, Rodrigo and Mart\'{\i}nez, Paloma},
+title = {Designing and Evaluating a User Interface for People with Cognitive Disabilities},
+year = {2021},
+isbn = {9781450375979},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3471391.3471400},
+doi = {10.1145/3471391.3471400},
+abstract = {Cognitive accessibility aims to make content more accessible for people with intellectual
+and learning disabilities. By following existing standards, it is possible to improve
+cognitive accessibility, making text content more readable and understandable while,
+at the same time, designing a more accessible user interface. In this work, cognitive
+accessibility design patterns and their application in the Easier web system's user
+interface are presented. The Easier web system, which is targeted at people with cognitive
+disabilities, provides a tool that assists in understanding text content. In addition
+to the monitoring of design techniques, user tests have been carried out in order
+to provide a preliminary evaluation of the level of cognitive accessibility of the
+Easier system's interface.},
+booktitle = {Proceedings of the XXI International Conference on Human Computer Interaction},
+articleno = {5},
+numpages = {8},
+keywords = {Cognitive Accessibility, Easy to Read, Web Interface, Design, User tests, Plain Language},
+location = {M\'{a}laga, Spain},
+series = {Interacci\'{o}n '21}
+}
+
+@misc{kirkpatrick_connor_campbell_cooper_2018,
+title={Web Content Accessibility Guidelines (WCAG) 2.1},
+url={https://www.w3.org/TR/WCAG21/},
+journal={W3C}, year={2018}, month={Jun}} 
