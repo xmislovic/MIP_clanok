@@ -3,10 +3,12 @@
 \usepackage[slovak]{babel}
 \usepackage[IL2]{fontenc}
 \usepackage{tabularx}
+\usepackage{ltablex}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{url} 
-\usepackage{hyperref} 
+\usepackage{hyperref}
+\usepackage{placeins}
 
 \usepackage{cite}
 
@@ -22,7 +24,7 @@
  {\small \texttt{xmislovic@stuba.sk}}
  }
 
-\date{\small 6. november 2021}
+\date{\small 11. december 2021}
 
 
 
@@ -34,9 +36,9 @@
 % Definitívne treba prerobiť
 V dnešnej dobe existuje veľa metód a techník, ako správne postupovať pri dizajne a modelovaní užívateľských rozhraní.
 Mnoho z nich však zabúda na to, že dané užívateľské rozhrania budú používať aj užívatelia s rôznymi zdravotnými postihnutiami, 
-pre ktorých môže byť používanie klasických užívateľských rozhraní komplikované, až nemožné. Tento článok chce priblížiť na príklade slepých, v čom sú nároky užívateľov so zdravotnými postihnutiami iné od nárokov bežných užívateľov, aké sú rozdiely v modelovaní bežných užívateľských rozhraní a užívateľských rozhraní pre zdravotne postihnutých, aké nástroje sú používané pri takomto modelovaní
-a aké techniky a pravidlá sa pri tvorbe a dizajne takýchto užívateľských rozhraní uplatňujú. 
+pre ktorých môže byť používanie klasických užívateľských rozhraní komplikované, až nemožné. Tento článok chce priblížiť na príklade slepých, v čom sú nároky užívateľov so zdravotnými postihnutiami iné od nárokov bežných užívateľov, aké sú rozdiely v modelovaní bežných užívateľských rozhraní a užívateľských rozhraní pre zdravotne postihnutých a aké techniky a pravidlá sa pri tvorbe a dizajne takýchto užívateľských rozhraní uplatňujú. 
 \end{abstract}
+\textbf{Kľúčové slová:} UI, užívatelské rozhranie, zdravotne postihnutý, modelovanie UI, HCI, prístupnosť, slepý užívatelia
 
 \section*{Úvod}
 V dnešnej dobe takmer každý interaguje v nejakej forme s počítačom pomocou užívateľských rozhraní. Pre život v modernej spoločnosti je počítač a schopnosť interagovať s ním nevyhnutnosť. To platí aj pre ľudí s rôznymi zdravotnými postihnutiami. Pre tých však bývajú tieto interakcie mnohokrát náročnejšie, ako pre bežných ľudí. Prístupnosť dlhú dobu nebola prioritou pri vývoji softvéru. Tento postoj bolo však kvôli všadeprítomnosti počítačov nutné zmeniť. V súčasnosti je prístupnosť jednou z hlavných požiadaviek pri tvorbe užívateľských rozhraní či už pre web alebo aplikácie. I napriek tejto zvýšenej pozornosti je prístupnosť počítačových systémov ešte nerozvinutým polom. Je však dôležité tomuto polu venovať pozornosť, lebo jeho rozvoj výrazne ovplyvňuje to, ako s počítačmi interagujeme. Rozvoj prístupnosti má dopad i na užívateľov bez zdravotných postihnutí, napr. text, ktorý bude zrozumiteľnejší pre človeka s dyslexiou, bude zrozumiteľnejší i pre bežného užívateľa.
@@ -49,9 +51,11 @@ Spoločné pomenovanie pre toto vedecké pole je HCI - human computer interactio
 
 Modely definované HCI nám teda opisujú všetky aspekty užívateľského rozhrania od jeho vzhľadu po to, kto ho bude ako používať. Každý z jednotlivých HCI modelov predstavuje komplexnú tému s vlastnou problematikou, metodikou, pravidlami, usmerneniami a nástrojmi. Ako príklad možno uviesť Presentation model. Vzhľad rozhrania je jedným z jeho najdôležitejších aspektov, podľa neho si užívateľ spraví prvú mienku o softvéry, ktorý používa. Niet teda divu, že existuje živá diskusia o tom, aká dizajnová filozofia je optimálna, či aký vzhľad tej či onej užívateľskej skupine vyhovuje najviac. S jednotlivými filozofiami vzhľadu prichádzajú i pravidlá a usmernenia hovoriace napríklad o optimálnom výbere farieb či fontu písma. Medzi nástroje najbežnejšie používane pri tejto časti modelovania užívateľských rozhraní patria programy ako Adobe XD, Adobe Photoshop či Figma.
 
+Aby bol dizajn užívateľských rozhraní o trochu jednoduchší, HCI ponúka niekoľko prístupov a postupov pre tvorbu optimálneho užívatelského rozhrania. Príkladom takéhoto postupu môže byť "Task analysis" (úlohová analýza). Pri tomto postupe sa dizajnér zameriava na úlohy a podúlohy, ktoré musí užívatel splniť aby správne narábal s rozhraním. Výhodou tohto postupu je, že odhaľuje možné problematické časti rozhrania, nevýhodou je však, že takto generované rozhrania majú tendenciu byť definované príliž detailne. \cite{huenerfauth2002design} Podobne aj iné dizajnové pristupy prinášajú určité výhody a nevýhody a je na dizajnérovi aby v danej situácii zvolil správny postup.
+
 Modelovanie užívateľských rozhraní je teda bezpochýb rozsiahla a komplikovaná téma. Komplikovanosť tejto témy je ešte väčšia, keď sa okrem bežných užívateľov zameriame i na užívateľov so špeciálnymi nárokmi. Moderná doba však nedovoľuje, aby boli počítače len nástrojmi pre vybraných, a preto je nutné aby sa užívateľské rozhrania ako i metódy použité k ich tvorbe adaptovali.
 
-\section*{Nároky zdravotne postihnutých užívateľov a ich dopad na tvorbu UR}
+\section*{Nároky zdravotne postihnutých užívateľov a ich dopad na tvorbu UI}
 \subsection*{Ako s počítačmi interagujú zdravotne postihnutý}
 Interakcie s počítačom sú v dnešnom svete nutnosť. Z toho dôvodu boli vyvinuté rôzne asistenčné technológie, ktoré umožňujú nevidiacim, zle vidiacim, ľudom s dyslexiou či inými poruchami spracovávania, hluchým, zle počujúcim či ľudom bez rúk interagovať s počítačom. Príkladom takýchto asistenčných technológií môžu byť čítačky obrazovky využívané slepými alebo nástroje ako "The Easier system" ktoré, pomocou  kombinácie metód zo spracovávania prirodzeného jazyka a HCI vedia zjednodušiť text pre ľudí s kognitívnymi poruchami\cite{10.1145/3471391.3471400}.Na to aby takéto asistenčné technológie fungovali je však potrebné, aby obsah ale i samotné médium podávajúce tento obsah spĺňali určité podmienky\cite{10.1145/2559206.2567823}.
 
@@ -66,30 +70,42 @@ Tie sa dajú rozdeliť do piatich kategórií:
  medzi 2D prístupom vidiaci a 1D prístupom slepých
  \item \textbf{Rovnosť správania} - Slepý užívatelia by mali mať prístup ku všetkým relevantným
  častiam užívateľského rozhrania
- \item \textbf{Prevensia semantickej straty} - Užívateľské rozhranie musí predísť strate
+ \item \textbf{Prevencia sémantickej straty} - Užívateľské rozhranie musí predísť strate
  sémantických informácií
  \item \textbf{Nezávislosť na zariadení} - Užívateľské rozhranie by malo fungovať na rôznych
  asistenčných technológiách
 \end{enumerate}
-Tieto nároky majú dopad na všetky HCI modely\cite{10.1007/978-3-540-70540-6_117}
-\begin{figure}[h]
+Tieto nároky majú dopad na všetky HCI modely\cite{10.1007/978-3-540-70540-6_117} ako je uvedené v nasledujúcom diagrame:
+\begin{figure}[!hbt]
  \centering
- \includegraphics[width=\textwidth]{diagram.png}
+ \includegraphics[width=.8\textwidth]{diagram2.png}
  \caption{Vplyv nárokov nevidomých na HCI modely\cite{10.1007/978-3-540-70540-6_117}}
 \end{figure}
-\subsection*{Vplyv nárokov zdravotne postihnutých na jednotlivé HCI modely}
-(Časť bude ešte doplnená)
+\FloatBarrier
+\subsection*{Vplyv nárokov zdravotne postihnutých na HCI modely}
+Adaptovanie užívateľského rozhrania pre ľudí so zdravotnými postihnutiami vyžaduje brať ohľad na ich fyzické, zmyslové a kognitívne schopnosti a podľa nich toto rozhranie upraviť. \cite{10.1145/3345002.3349292} Úprava HCI modelov podľa vyššie uvedených nárokov slepých ľudí by teda vyzerala následovne:
 
-\section*{Pravidlá pri tvorbe prístupných užívatelských rozhraní}
+\textbf{Úlohový model} by mal po uživateloch požadovať len to, čo sú schopný vykonať (Adekvátnosť úloh)
+
+\textbf{Doménový model} musí ponúkať možnosť jednodimenzionálnej navigácie (Dimenzionálny kompromis) ako aj podporu pre hlasový výstup či výstup v Braillovom písme
+
+\textbf{Dialógový model} by mal dovolovať aj prístup len pomocou klávesnice (Rovnosť správania) a mal využívať viacero techník na predanie informácií (Prevencia semantickej straty)
+
+\textbf{Prezentačný model} by mal definovať hlasový výstup a výstup v Braillovom písme pre každý objekt užívateľského rozhrania (Rovnosť správania) a mal by poskytovať dosť alternatív pre neštandartné grafické prvky (Prevencia semantickej straty)
+
+\textbf{Platformový model} by mal pre hlasový výstup a výstup v Braillovom písme využívať štandardné API (Nezávislosť na zariadení)
+
+\textbf{Užívateľský model} by mal obsahovať konfiguračné parametre súvisiace s prevenciou sémantickej straty a nezávislosti na zariadení \cite{10.1007/978-3-540-70540-6_117}
+\section*{Pravidlá tvorby prístupných užívatelských rozhraní}
 Kvôli dôležitosti prístupnosti užívateľských rozhraní pre všetkých užívateľov bolo vyvinutých niekoľko sád pravidiel a
 usmernení. V dnešnej dobe sú stránky ako eHealth či eGoverment viac a viac populárne, niet teda divu, že väčšina z 
 týchto pravidiel a regulácií sa zameriava práve na internet a prístupnosť web-stránok. Najrozšírenejšie z týchto
 usmernení sú "The Web Content Accessibility Guidelines (WCAG)" vytvorené W3C (World Wide Web Consortium)\cite{10.1145/3471391.3471400}. Tie sú
 postavené na štyroch princípoch: vnímateľnosť, ovládateľnosť, zrozumiteľnosť a robustnosť
-\cite{kirkpatrick_connor_campbell_cooper_2018}.
-
-\begin{table}[hbt!]
- \begin{tabularx}{\textwidth}{|X|X|}
+\cite{kirkpatrick_connor_campbell_cooper_2018}. Hlavné body týchto pravidiel sú uvedené doľe v tabuľke.
+\begin{table}[!hbt]
+\small
+ \begin{tabularx}{1.15\textwidth}{|c|X|}
   \hline
   \textbf{Textové alternatívy} & Netextový obsah by mal mať textovú náhradu \\
   \hline
@@ -101,7 +117,7 @@ postavené na štyroch princípoch: vnímateľnosť, ovládateľnosť, zrozumite
   \hline
   \textbf{Klávesnica} & Všetka funkcionalita by mala byť dostupná pomocou klávesnice \\
   \hline
-  \textbf{Poskytnúť dosť času} & Užívateľ by mal mať dosť času na čítanie a používanie obsahu\\
+  \textbf{Poskytnúť dosť času} & Užívateľ by mal mať dosť času na používanie obsahu\\
   \hline
   \textbf{Záchvaty a fyzické reakcie} & Obsah by nemal spôsobovať záchvaty či iné fyzické reakcie \\
   \hline
@@ -111,9 +127,9 @@ postavené na štyroch princípoch: vnímateľnosť, ovládateľnosť, zrozumite
   \hline
   \textbf{Čitatelnosť} & Obsah by mal byť čitateľný a zrozumiteľný \\
   \hline
-  \textbf{Predvídatelnosť} & Web stránky by sa mali správať predvídateľným spôsobom \\
+  \textbf{Predvídatelnosť} & Web stránky by sa mali správať predvídatelne \\
   \hline
-  \textbf{Asistencia vstupu} & Web stránka by mala pomáhať užívateľom predísť chybám \\
+  \textbf{Asistencia vstupu} & Stránka by mala pomáhať užívateľom predísť chybám \\
   \hline
   \textbf{Kompatibilita} & Obsah by mal byť kompatibilný so súčasnými i budúcimi asistenčnými technológiami \\
   \hline
@@ -127,9 +143,36 @@ ukázali, že užívatelia s kognitívnymi postihnutiami mali problém aj pri u�
 takýchto usmernení môžu byť ``The Easy to Read guidelines`` či ``European Guidelines for the Production of Easy-to-Read
 information``. I keď je asi nemožné aby web-stránka spĺňala každé usmernenie, je dôležité a občas dokonca zákonom vyžadované,
 aby sa ich pokúšala splniť čo najviac.
+\FloatBarrier
+\section*{Reakcie na témy z prednášok}
+\paragraph{Spoločenské súvislosti}
+Keď sa počítače prvýkrát objavili, nikto nemohol predpokladať aký veľký bude ich vplyv na ceľú ľudskú spoločnosť. V dnešnej
+dobe sú počítače nejakou formou integrované v každom aspekte nášho života, od nákupu potravín, po to, ako volíme vo volbách.
+Dá sa predpokladať, že táto integrácia počítačov do nášho života bude v nadchádzajúcich rokoch pokračovať. Je preto dôležité,
+aby sme vytvárali rozhrania, vďaka ktorým budú môcť všetci užívatelia bez ohladu na vek či zdravotný stav počítače používať.
+V opačnom prípade by došlo k segregácii skupiny ľudí.
+\paragraph{Historické súvislosti}
+Informatika ako vedecká disciplína je na rozdiel od fyziky alebo matematiky pomerne mladá. To zo sebou prináša výhody i nevýhody.
+Nepochybnou výhodou je, že keďže je informatika tak mladá, je v nej toho veľa čo objaviť alebo vynájsť. Veľajším účinkom je však,
+že informatika vďaka tomu napreduje tak ohromnou rýchlosťou, že to, čo bolo perfektne v poriadku včera, dnes už môže byť považované
+za zastarané a nedostatočné. Je to táto rýchlosť vývoja, ktorá robí informatiku zaujímavou, no zároveň náročnou disciplínou. Nemusí
+to byť nutne len postup technológie posúvajúci softvér dopredu. V posledných rokoch sa objavilo veľa regulácií a pravidiel, kde sa
+očakáva, že softvér ich bude spĺňať, aby bol optimálne prístupný.
+\paragraph{Technológia a ľudia}
+Jedným z problémov informatiky je, že má tendenciu akosi pozabudnúť na človeka. Práve preto sú v dnešnej dobe populárne prístupy,
+ktoré počítajú s tým, že zákazník aj programátor sú ľudia, nie počítače zadávajúce presné inštrukcie a vracajúce perfektné
+výsledky. Táto snaha robiť softvér viac "pre ľudí" sa prejavuje aj v tom, ako softvér vyzerá. V dnešnej dobe sa kladie velký dôraz
+na to aby bol dizajn rozhrania pokiaľ možno čo najčitatelnejší a najprístupnejší, a to i pre ľudí s rôznymi zdravotnými postihnutiami.
+\paragraph{Udržateľnosť a etika}
+Informatika sa rozvíja veľmi rýchlo, je teda logické že sa stále viac a viac začína rozvíjať aj otázka jej udržatelnosti. U mnohých
+systémov v minulosti sa udržateľnosť veľmi neriešila, počítačov bolo málo a boli zväčša v rukách odborníkov. Ako sa však počítače
+začali šíriť, začalo byť viac a viac podstatné, aby vývoj softvéru, ktorý na počítačoch beží, bol udržatelný, lebo od neho záviselo
+viac a viac ľudí. S rozšírením sa počítačov sa začali objavovať aj etické otázky. Od plagiátorstva kódu po samoriadiace sa autá. Jedným
+z týchto etických problémov môže byť práve prístupnosť softvéru. Najetickejšie by bolo, keby bol softvér plne prístupný pre všetkých, no 
+dosiahnuť to je často komplikované, až priam nemožné. I napriek tomu je však potrebné sa o to aspoň pokúsiť
 
-\section*{Nástroje pre tvorbu užívateľských rozhraní pre zdravotne postihnutých}
-(Časť bude ešte doplnená)
+\section*{Záver}
+Prístupnosť počítačov a ich užívateľských rozhraní nebola vždy samozrejmosťou. Posledné roky so sebou priniesli ohromný rozvoj v tejto oblasti. Boli pevne zadefinované postupy a pravidlá pre tvorbu prístupných rozhraní. Prístupnosť sa stala nutnou požiadavkou takmer každej aplikácie či webstránky. Napriek tomu je v tomto poli ešte veľa na doháňanie. Ani tie najlepšie asistenčné technológie či regulácie nie sú schopné vytvoriť perfektne prístupné užívateľské rozhranie. Napriek tomu je dôležité, aby bol na prístupnosť braný ohľad, lebo aj čiastočne prístupný program je lepší, ako program bez akejkoľvek snahy o prístupnosť.
 
 \bibliography{literatura}
 \bibliographystyle{abbrv} % prípadne alpha, abbrv alebo hociktorý iný
